@@ -5,7 +5,8 @@ no copyright just feel free to use it
 This script build on CodeIgniter 2.0
 
 
-./[A[A[B[D[D"Share and Get More"
+"Share and Get More"
 
+./Regard
 
 justudin
