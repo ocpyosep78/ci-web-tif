@@ -1,0 +1,86 @@
+/* 
+    Document   : Login
+    Created on : May 5, 2012, 11:19:55 PM
+    Author     : kamikaze
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/*
+Login CSS
+Informatics Engineering
+Science and Technology Faculty
+Sunan Kalijaga State Islamic University of Yogyakarta
+*/
+
+body{
+    background-color: #fefefe;
+    float: none;
+    padding: 150px;
+    
+}
+
+#container {
+background: #f5f5f5;	
+padding: 20px 20px 20px 20px;
+margin: auto;
+width: 750px;
+border-radius: 7px;
+height: 300px;
+box-shadow: 1px 1px 10px 1px #c5c5c5;
+border: 1px solid #c5c5c5;
+}
+    
+
+#loginbox{
+    color: #333;
+    font-family: Berkshire Swash;
+    float: right;
+    width: 300px;
+    height: 280px;
+    padding:  10px;
+}
+#loginbox input{
+    width: 280px;
+    height: 25px;
+    margin: 5px;
+    font-size: medium;
+    padding: 7px;
+    border: gray solid 1px;
+}
+#loginbox p{
+    font-family: federant;
+    font-style: normal;
+    color: red;
+}
+#button input{
+    font-family: Berkshire Swash;
+    border-radius: 5px;
+    box-shadow: 2px 1px 5px #333;
+    border: 1px solid #333;
+    background-color: darkslategrey;
+    color: white;
+    font-size: large;
+    height: 40px;
+    width: 90px;
+    float: right;
+    margin-right: 20px;
+    
+}
+#button input:hover{
+    background-color: black;
+}
+
+input:hover{
+    background-color: #fbfbfb;
+}
+#image{
+    padding: 10px;
+    position: absolute;
+    float: left;
+    background: url('../images/login-trans.png') transparent center no-repeat;
+    width: 400px;
+    height: 280px;
+    bottom: inherit;
+}
+

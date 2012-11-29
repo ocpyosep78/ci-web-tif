@@ -1,0 +1,272 @@
+-- phpMyAdmin SQL Dump
+-- version 3.1.3.1
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: May 12, 2012 at 01:52 PM
+-- Server version: 5.1.33
+-- PHP Version: 5.2.9
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Database: `tif2012`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_abstrak`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_abstrak` (
+  `id_abstrak` int(5) NOT NULL AUTO_INCREMENT,
+  `nim` varchar(10) NOT NULL,
+  `nama_mhs` varchar(100) NOT NULL,
+  `id_pembimbing` int(3) NOT NULL,
+  `tgl_munaqosah` date NOT NULL,
+  `judul` varchar(200) NOT NULL,
+  `abstrak` text NOT NULL,
+  PRIMARY KEY (`id_abstrak`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+
+--
+-- Dumping data for table `tbl_abstrak`
+--
+
+INSERT INTO `tbl_abstrak` (`id_abstrak`, `nim`, `nama_mhs`, `id_pembimbing`, `tgl_munaqosah`, `judul`, `abstrak`) VALUES
+(5, '096500500', 'Tester', 1, '2012-04-09', 'Testing Paper 1', 'testing paper');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_agenda`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_agenda` (
+  `id_agenda` int(11) NOT NULL AUTO_INCREMENT,
+  `judul` varchar(100) NOT NULL,
+  `tgl_mulai` date NOT NULL,
+  `tgl_selesai` date NOT NULL,
+  `jam_mulai` time NOT NULL,
+  `jam_selesai` time NOT NULL,
+  `tempat` varchar(100) NOT NULL,
+  `topik` text NOT NULL,
+  `sumber` varchar(100) NOT NULL,
+  `tgl_posting` datetime NOT NULL,
+  PRIMARY KEY (`id_agenda`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `tbl_agenda`
+--
+
+INSERT INTO `tbl_agenda` (`id_agenda`, `judul`, `tgl_mulai`, `tgl_selesai`, `jam_mulai`, `jam_selesai`, `tempat`, `topik`, `sumber`, `tgl_posting`) VALUES
+(1, 'ICID 2012', '1990-02-19', '1990-03-01', '15:00:00', '17:22:00', 'Hotel Indonesia Aja', 'Jogja aja yaa..\r\n', 'Jogja Istimewa', '2012-04-22 00:00:00'),
+(3, 'Ucud', '1990-02-21', '1990-03-28', '15:00:00', '17:22:00', 'Hotel Indonesia', 'gitu deh', 'Jogja Istimewa', '2012-04-22 00:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_artikel`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_artikel` (
+  `id_artikel` int(5) NOT NULL AUTO_INCREMENT,
+  `tipe` varchar(11) NOT NULL,
+  `judul` varchar(400) NOT NULL,
+  `isi` text NOT NULL,
+  `gambar` varchar(200) DEFAULT NULL,
+  `deskripsi_gambar` text,
+  `sumber` varchar(100) NOT NULL,
+  `tanggal` date NOT NULL,
+  `jam` time NOT NULL,
+  PRIMARY KEY (`id_artikel`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
+
+--
+-- Dumping data for table `tbl_artikel`
+--
+
+INSERT INTO `tbl_artikel` (`id_artikel`, `tipe`, `judul`, `isi`, `gambar`, `deskripsi_gambar`, `sumber`, `tanggal`, `jam`) VALUES
+(1, 'berita', 'Fakultas Saintek UIN Sunan Kalijaga Gelar Konferensi Internasional: Hadirkan Pakar TIK dari Berbagai Negara', '<p>Pemanfaatan  teknologi informasi dan komunikasi (TIK) kini sudah merambah di berbagai bidang. Dari bidang Pemerintahan, pendidikan, kesehatan, ekonomi/bisnis, industri, sains, agama, lingkungan, TIK untuk kebutuhan khusus (orang-orang tua/cacat), bahkan untuk manajemen bencara, anti-teririsme, anti korupsi dan sebagainya. Penggunaan  (TIK) terbukti  mampu meningkatkan kualitas hidupmanusia, serta memberikan kontribusi dalam mengintegrasikan seluruh warga negara dalam masyarakat yang maju dan meningkat kualitas hidupnya.  Dengan kemajuan TIK yang begitu pesat ini, ada beberapa isu yang hendaknya segera didiskusikan agar pemanfaatan TIK benar-benar optimal dalam rangka pembangunan masyarakat dan bangsa, dan meminimalisir efek samping yang ditimbulkan, baik terhadap sisi moralitas, dan keseimbangan ekologi.  Isu tersebut antara lain misalnya, standardisasi prosedur, strategi adopsi teknologi, dan pemilikan teknologi alternatif. Mensikapi hal ini, Program Studi Teknik Informatika, Fakultas Sains dan Teknologi UIN Sunan Kalijaga,  menyelenggarakan &acirc;&euro;&oelig;International Conference on Informatics for Developmen  (ICID) 2011,  Hari ini, Sabtu, 26 November 2011, bertempat di Hotel Inna Garuda.  Menurut Ketua Prodi Teknik Informatika UIN Sunan Kalijaga, yang juga selaku ketua penyelenggara  ICID, Agus Mulyanto, S. Si., M. Kom., forum ini diselenggarakan dengan  tujuan mempertemukan para peneliti dan praktisi yang berminat dalam penerapan teknologi informasi dan komunikasi dalam berbagai bidang. ICID juga diharapkan menjadi ajang berdiskusi tentang semua aspek pada penggunakan TIK.  Konferensi ini, sebelumnya telah menerima 110 paper dari berbagai negara seperti, Jepang, Brunai Darussalam, Malaysia, Maroko, Korea, Srillanka,  Swedia dan Indonesia. Paper &acirc;&euro;&ldquo; paper yang masuk ke panitia,  telah dipresentasikan dan  akan dipublikasikan dalam profinding yang terbagi dalam empat kluster yakni;  ICT dan Social Issue, Artificial Intelligence &amp; Image Processing, Computer Sistem &amp; Network, dan Database and Information System. Konferensi ini selain dihadiri oleh para pengirim makalah dari berbagai negara, juga dihadiri kalangan akademisi, peneliti, praktisi dan kalangan bisnis TI, serta para mahasiswa berbagai perguruan tinggi di wilatah  DIY. Para peserta konferensi ini  mendengarkan paparan  Kaynote Speker  antara lain : Dr. Dorothea Klein; (ICT4D Centre/UNESCO chair in ICT for Development, lecturer, Royal Holloway, University of London, UK., Assoc), Prof. Wenny Rahayu, (Lecturer, La Trobe University, Australia), Prof. Dr. Srikanta Patnaik, (President of Interscience Research Network, IRNet, India)  Dewan Ahli yang hadir pada forum ini antara lain : Prof. Richard Heeks, The University of Manchester, Prof. Deokjai Choi; Chonnam Nasional University., Prof. Jongtae Rhee, Dongguk University, Assoc. Prof. Abdullah Saad Almudimigh, King Saud University, Assoc. Prof. Zarina Shukur, Universitas Kebangsaan Malaysia, Dr. Hj. Mohammad Nabil Almunawar, University of Brunai Darussalam, Assoc, Prof. Retantyo Wardoyo(UGM), Prof. Kuspriyanto (ITB, Dr. Agus Zainal Arifin (Institut Teknologi Sepuluh November), Prof. Edwin Blake, The University of Cape Town, Assocv. Prof. Marianne Georgsen, Aalborg University, Dr. Rory McGreal; Athabasca University. Dalam paparanya, ketiga pakar TIK, Dorothea, Srikanta dan Wenny, banyak menyoroti pentingnya pemanfaatan TIK di berbagai bidang. selain pakar mereka adalah aktifis penggiat  diterapkannya TIK yang efisien dan efektif sehingga kehadiran TIK menjadi sangat bermanfaat bagi peningkatan kuatitas kehidupan manusia. Dorothea misalnya, di UNESCO, dia memiliki konsorsium yang sangat solit dan jejaring untuk menggiatkan aplikasi dan pemanfaatan TIK dalam bidang pendidikan. Dorothea sangat respek untuk menjadikan para praktisi pendidikan memahami perkemmbangan dan pemanfaatan TIK dalam pengajaran. Semua pendidik hendaknya melek TIK sehingga bisa mengantarkan anak didik mereka berkembang optimal dan benar-benar mengetahui dunia luas. Sementara Wenny, memaparkan tentang pemanfaatan TIK di bidang kesehatan. Menurut Wenny, memanfaatan TIK di bidang kesehatan saat ini sangat penting. Data riwayat kesehatan pasien dulu berupa kertas-kertas yang terpisah. Sekarang sudah terintegrasi melalui data elektronik. Sistem kesehatan elektronik mengintegrasikan riwayat medis pasien dari berbagai sumber. Misalnya dari Laboratorium, rumah sakit dan farmasi. Dengan catatan yang terintegrasi ini maka, diagnosa menjadi lebih akurat. Tindakan medis tentunya juga akan lebih cepat. Dan secara umum meningkatkan kualitas pelayanan kesehatan, kata Wenny. Sementara dalam paparannya  Srikanta  lebih menyoroti pertanggungjawaban sosial dan lingkungan akibat perkembangan yang sangat pesat pemanfaatan TI. Menurut Srikanta, permintaan alat-alat TI dan perkembangan yang sangat cepat industri TI, mengakibatkan ketidakseimbangan ekologi dan lingkungan. Peningkatan yang sangat cepat sampah-sampah elektronik dan cara daul ulang yang tak tepat membuat kondisi ekologi menjadi semakin parah. Untuk mengatasinya, masyarakat perlu diperkenalkan green komputing. Yakni peralatan komputer yang ramah lingkungan. Salah satunya adalah peralatan yang memanfaatkan energi matahari atau peralatan elektronik yang efisien energi. Maka hasil-hasil penelitian yang telah mampu menciptakan alat alat elektronik seperti ini perlu terus diperkenalkan kepada masyarakat luas.  bercermin dari dunia Barat yang masyarakatnya sudah demikian leluasa menikmati hasil-hasil penelitian dan analisis seputar TIK alternatif. melalui jurnal-jurnal dan buletin. Maka melalui jurnal-jurnal yang diterbitkannya, Srikanta berupaya mempublikasikan seluas-luasnya hasil-hasil penelitian seputar TIK alternatif, di negara negara berkembang agar bisa memberi pemahaman kepada masyarakat luas bagaimana mengaplikasikan dan memanfaatkan TIK secara efisien dan  meminimalisir efek samping yang ditimbukan.  Mereka bertiga ini juga banyak memiliki jaringan pekerja sosial yang  sangat giat melakukan desiminasi terhadap masyarakat luas agar melek TI untuk pengembangan dan pembangunan di bidangnya masing-masing. Dekan Fakultas Saintek UIN Sunan Kalijaga mengatakan pentingnya forum ini bagi fakultasnya, yang memiliki Prodi  Teknik Informatika. Dengan Sarinng informasi di forum ICIT 2011, yang sudah 2 kali dilakukan oleh Fakultas Saintek UIN Sunan Kalijaga ini, menurut Minhaji, berbagai pengalaman ketiga pakar akan sangat bermanfaat bagi para peserta diskusi  untuk mensosialisasikan bagaimanan mengaplikasikan dan memanfaatkan TIK sebaik &acirc;&euro;&ldquo; baiknya di bidangnya masing-masing. Forum ini juga sangat bermanfaat bagi pengembangan akademik di fakultasnya. Melihat pentingnya kehadiran TIK di semua bidang, pihaknya bertekat mengasilkan lulusan TI yang mahir membuat sistem pemrograman yang bisa diterapkan di semua bidang, sehingga lulusan TI Saintek UIN Sunan Kalijaga bisa diperhitungkan. Bagi UIN sendiri, keadiran TI yang terintegrasi juga sudah sangat mendesak. Karena itu UIN Sunan Kalijaga juga sudah mencanangkan  tahun 2012  nanti, 100% civitas akademika UIN Sunan Kalijaga harus sudah paham betul pengaplikasian dan pemanfaatan TIK, sehingga pelayanan administrasi dan pengembangan akademik yang efisien, efektif, transparan dan akuntabel di UIN Sunan Kalijaga benar-benar terwujud, Forum ini menjadi pemacu, agar pencanangan UIN sesuai target, demikian jelas Minhaji.</p>', 'Icid20001.jpg', 'Dekan Fakultas Sains & Teknologi, Prof. Min Haji buka ICID', 'TIF', '2012-05-12', '01:04:00'),
+(3, 'artikel', 'Kebangkitan Kaum Intelektual', 'Kebangkitan Nasional ditandai oleh dua peristiwa penting yaitu berdirinya Boedi Oetomo pada tanggal 20 Mei 1908 dan Ikrar Sumpah Pemuda pada tanggal 28 Oktober 1928. Masa ini merupakan salah satu dampak politik etis yang sudah mulai diperjuangkan oleh kaum pribumi. Bangkit dan bergerak menyongsong Indonesia baru bebas dari segala bentuk penindasan fisik dan mental merupakan misi besar kaum intelektual muda yang terkumpul dari berbagai elemen yang ada tanpa membedakan ras, suku, agama dan lain sebagainya. Sejak itu, tanggal 20 Mei kita tetapkan sebagai Hari Kebangkitan Nasional sebagai titik tolak perjuangan melawan penjajah dengan mempergunakan kabangkitan politik dan organisasi.\r\n\r\nAda banyak hal yang bisa kita refleksikan pada Hari Kebangkitan Nasional tahun ini terutama yang berkaitan dengan persoalan kebangsaan kita. Mulai dari kemiskinan, pengangguran, jaminanan sosial yang layak, kebodohan, keterbelakangan, keadilan dan semacamnya. Ternyata harus diakui bahwa kita masih terjajah dan belum merdeka sepenuhnya. Romantisme kabangkitan nasional hanya sebatas masa lalu yang tidak memiliki hubungan korelatif dengan kondisi ril bangsa kita hari ini. Semuanya masih jauh dalam alam imajinasi abstrak para pendiri bangsa ini, yakni bangsa yang bebas, berdaulat dan kuat.\r\n\r\nSistem demokrasi yang diidealkan menjadi solusi efektif dalam tata negara ternyata jauh panggang api. Elit masih menyibukkan diri dengan kepentingan pribadi dan golongan serta menjauhklan diri untuk sekadar memikirkan persoalan riil di lapangan yang dihadapi bangsa ini. Ada semacam disparitas yang begitu kuat dalam hubungan antara wakil rakyat dan rakyat biasa yang memberikan mandat. Wakil rakyat bertindak sesuai dengan insting kepentingan pribadinya, sementara rakyat dibiarkan dengan logika yang dipegangnya. Kalau sudah demikian realitasnya, hendak kemana rakyat kecil mengadu semua persoalan krusial yang dihadapinya.\r\n\r\nBangkitnya kaum intelektual\r\n\r\nHarus diakui bahwa persoalan bangsa yang besar tidak bisa dipasrahkan sepenuhnya pada pemegang kebijakan politik yang direfresentasikan melalui partai politik semata. Selama ini, terbentuk pemahaman yang salah dalam konteks pengelolaan dan penyelesaian problem kebangsaan yang hanya berharap banyak pada elit pemegang kekuasaan. Padahal ada elemen penting lain yang justru bisa diharapkan suara kritisnya, yaitu kaum intelektual.\r\n\r\nKaum intelektual merrupakan elemen penting yang dibutuhkan suatu bangsa untuk memajukan peradaban bangsa tersebut dalam segala  hal. Tak bisa dipungkiri bahwa peran kaum intelektual sangatlah diperlukan sesuai dengan kapasitas dan spesifikasi keilmuan yang dimilikinya. Tentunya dengan memadukan secara harmonis antara pengetahuan yang ada dalam alam ide dengan problem sosial yang ada di lapangan. Hanya dengan mamadukan dua wilayah tersebut, eksistensi kaum intelektual akan diuji dengan sempurna. Apakah ia mampu menjadi seorang intelektual organik atau intelektual oportunis?\r\n\r\nIntelektual organik, meminjam istilahnya Antonio Gramsci adalah sebutan bagi kaum intelektual-akademisi yang mendedikasikan proses pembelajarannya sebagai upaya membuka ruang atas terjadinya gap antara teori dan praktik. Bagi mereka tidak cukup peran intelektual jika hanya diapresiasikan lewat buku semata. Sebaliknya, lebih dari itu, perannya bagi pemberdayaan masyarakat adalah satu kewajiban yang mutlak. Modal intelektual seperti inilah yang dibutuhkan bangsa ini untuk kemudian bangkit dari keterpurukan menuju kebangkitan yang sesungguhnya.\r\n\r\nSebaliknya, intelektual oportunis adalah mereka yang menyibukkan diri dengan rutinitas ilmiahnya tanpa menoleh sedikitpun akan realitas sosial di sekelilingnya. Saking apatisnya, seolah hati mereka talah buta dengan kesibukan individualismenya tanpa memedulikan apa sebenarnya yang dibutuhkan oleh masyarakat.\r\n\r\nBerbagai persoalan sosial yang nyata di depan mata kita, mestinya menjadi semacam peringatan serius bagi semua pihak. Bukan hanya dimaknai sebatas wacana penghias media massa. Sebab menumpuknya problem sosial hanya akan melahirkan kebimbangan-kebimbangan yang tidak tentu arah yang ujung-ujungnya membingungkan rakyat itu sendiri. Kaum intelektual mengembang tanggungjawab dan fungsi sosial besar yang harus diimplementasikan dalam masyarakat. Hal sederhana yang mungkin bisa kita lakukan dalam rangka mengembalikan khittah kaum intelektual di atas adalah dengan cara merubah pola pikir apatis dan oportunis menuju pola pikir kritis-konstruktif dan kontributif.\r\n\r\nJauh lebih penting dari gagasan di atas adalah keterlibatan aktif kaum intelektual di tengah-tengah masyarakat dengan memberikan pencerahan pada sekian persoalan yang ada sehingga mampu memecahkan sekian problem sosial dengan tuntas dan cerdas. Tentunya sesuai dengan kapasitas dan spesifikasi keilmuan masing-masing. Semoga momentum perayaan Kebangkitan Nasional tahun ini akan dibarengi dengan kabangkitan kaum intelektual.\r\n\r\n (Sumber; Tulisan ini dmuat di Lampung Post Group Media Indonesia, Selasa, 24 Mei 2011)', NULL, NULL, 'justudin', '2012-03-19', '17:11:37'),
+(19, 'berita', 'Sekprodi Baru, Harus Lebih Maju', '<p>TIF-Saintek, UIN SuKa. Pelantikan Kaprodi dan Sekprodi oleh Dekan  Fakultas Sains dan Teknologi, Prof. Drs. H. Akh. Minhaji, M.A., Ph.D.  pada Kamis (5/4) lalu menetapkan Agus Mulyanto, S.Si., M.Kom. sebagai  Kaprodi dan Nurochman, S.Kom., M.Kom. sebagai Sekprodi Program Studi  Teknik Informatika untuk periode 2012-2016.</p>\r\n<p>Semoga nantinya dapat lebih meningkatkan kerjasama dan komunikasi yang  baik, serta dapat menjalankan amanah dengan baik guna mendukung visi dan  misi Prodi Teknik Informatika khususnya dan Fakultas Sains dan  Teknologi tentunya.</p>', '', '', 'ST', '2012-05-12', '11:26:00'),
+(20, 'berita', 'Diskusi Panel Laboratorium: Peta Interaktif Fakultas Sains dan Teknologi', '<p style="text-align: justify;">KabarLab(26/04) - Diskusi merupakan wadah komunikasi efektif untuk  dapat saling menularkan ilmu dan wawasan yang dimiliki. Kali ini diskusi  yang digelar di ruang pertemuan Laboratorium Terpadu lantai 2  membicarakan masalah peta interaktif. Pembicara pada sesi diskusi ini  adalah Antoni Fajria, mahasiswa Program Studi Teknik Informatika yang  saat ini mengambil Kerja Praktik (KP) bidang pemrograman multimedia di  bawah bimbingan Aulia Faqih Rifa''i, M.Kom.</p>\r\n<p style="text-align: justify;">Dalam presentasinya, Antoni Fajria memperlihatkan hasil KP yang ia  laksanakan di Fakultas Sains dan Teknologi. Selama KP ia membangun peta  interaktif fakultas. Aplikasi yang ia gunakan adalah yang berbasis&nbsp;<em>opensource</em>&nbsp;dengan teknik yang ia gunakan adalah pengambilan gambar secara&nbsp;<em>panoramic&nbsp;</em>yakni  suatu teknik pengambilan gambar secara memanjang (membentang).  Diperlukan banyak gambar untuk memperoleh hasil foto panoramic yang  baik. Proses tersebut tidak sampai pada pengambilan gambar saja, tahap  selanjutnya juga diperlukan sebuah tools untuk memproses agar  gambar-gambar tersebut bisa terlihat benar-benar memanjang dan tidak  putus. Pengolahan gambar ia lakukan dengan merender beberapa foto, lalu  mencocokkan titik pada masing-masing gambar yang ingin disambung dan  dicari titik yang memiliki kemiripan pola. Untuk selanjutnya gambar yang  sudah dijadikan gambar panoramic tersebut ditampilkan ke browser dengan  aplikasi flash player khusus untuk peta interaktif.</p>\r\n<p style="text-align: justify;">Nantinya peta ini akan disimulasikan sebagai peta UIN Sunan Kalijaga  secara menyeluruh. Namun perlu &nbsp;didukung oleh semua pihak agar nantinya  benar-benar bisa mewujudkan aplikasi ini dan dapat digunakan secara  menyeluruh, baik untuk fakultas maupun universitas.</p>\r\n<p style="text-align: justify;">Diskusi ini ditutup dengan tanya-jawab dan closing dari pembimbing dan  Direktur Lab Terpadu, Bp. Dr. M. Ja''far Luthfi. Semoga diskusi ini bisa  membawa manfaat bagi semuanya.</p>', 'antoni_f.jpg', 'Antoni Fajria - Diskusi Panel Laboratorium', 'TIF', '2012-05-12', '01:01:00'),
+(21, 'berita', 'Pengabdian pada Masyarakat Prodi Teknik Informatika Mei 2012', '<p>Teknologi Informasi dan Komunikasi yang sudah seharusnya diperkenalkan  lebih dekat lagi kepada tenaga pendidik (guru) perlu didukung oleh para  tenaga ahli yang kompeten di bidangnya. Pendekatan TIK kepada tenaga  pendidik ini yang pada kesempatan Jum''at (11/5) tersebut diselenggarakan  oleh Program Studi Teknik Informatika, dengan mengambil tema Pelatihan  TIK bagi Guru SDIT Luqman Hakim.&nbsp;</p>\r\n<p>Pemateri pada sesi ini adalah Sumarsono, M.Kom. Materi yang dibawakan  mengenai pembuatan slideshow presentasi yang menarik dan animatif  sehingga nantinya dapat diterapkan pada media pembelajaran di  sekolahnya. Aplikasi yang digunakan adalah Microsoft Powerpoint 2007,  sehingga para guru familier dan mudah untuk mencobanya sendiri.&nbsp;</p>\r\n<p>Dijelaskan oleh pemateri dalam hal pembuatan motion path, yaitu  bagaimana sebuah objek pada slide presentasi dapat bergerak mengikuti  garis bantu yang dibuat. Seperti contohnya pada saat guru menjelaskan  kepada muridnya di kelas, nantinya akan dapat memvisualkan suatu keadaan  objek yang senyatanya sehingga murid lebih mudah menerima materi di  kelas.</p>\r\n<p>Pelatihan TIK bagi guru ini diikuti oleh sekitar 20 orang peserta  didampingi para fasilitator dan asisten fasilitator. Kegiatan ini  diikuti dengan penuh antusias oleh para peserta. Semoga kegiatan  Pengabdian Masyarakat ini dapat bermanfaat bagi perkembangan pendidikan  dan para pendidik dalam memajukan pendidikan.</p>', 'abdimas-tif_mei2012.jpg', 'Abdimas Mei 2012', 'TIF', '2012-05-12', '01:06:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_datastatis`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_datastatis` (
+  `id_datastatis` int(3) NOT NULL AUTO_INCREMENT,
+  `judul` varchar(100) NOT NULL,
+  `isi` text NOT NULL,
+  PRIMARY KEY (`id_datastatis`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+
+--
+-- Dumping data for table `tbl_datastatis`
+--
+
+INSERT INTO `tbl_datastatis` (`id_datastatis`, `judul`, `isi`) VALUES
+(1, 'Profil Program Studi', '<p>Studi teknik informatika (PSTInf) UIN Sunan Kalijaga hadir dengan tujuan mencetak sumber daya manusia yang unggul dalam integrasi dan interkoneksi keilmuan teknik informatika dan keislaman. Kurikulum berbasis kompetensi (Competent-Based Curriculum) dan Case-Based Curriculum menjadi penting dalam proses akademik PSTInf UIN Sunan Kalijaga. Kompetensi inti dari PSTInf UIN Sunan Kalijaga adalah penguasaan dan penerapan teknologi informasi dalam bidang decision making, operation dan advanced application development. PSTInf UIN Sunan Kalijaga juga tengah mempersiapkan berbagai fasilitas penunjang merupakan State of the Art dari kemajuan teknologi informasi itu sendiri seperti fiber optic connection, cyber campus, Wi-Fi, mobile-technology, advance laboratory maupun perangkat ICT (Information and Communication Technology) modern lainnya. Serta didukung dosen yang sedang melanjutkan studi ke jenjang S2 dan S3, baik didalam maupun diluar negeri.</p>\r\n<table cellspacing="1" cellpadding="1" width="611" height="54">\r\n<tbody>\r\n<tr>\r\n<td>\r\n<p>Nama Program Studi</p>\r\n</td>\r\n<td>\r\n<p>:</p>\r\n</td>\r\n<td>\r\n<p>Teknik Informatika</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td>\r\n<p>Fakultas</p>\r\n</td>\r\n<td>\r\n<p>:</p>\r\n</td>\r\n<td>\r\n<p>Sains &amp; Teknologi</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td>\r\n<p>Profesi Utama</p>\r\n</td>\r\n<td>\r\n<p>:</p>\r\n</td>\r\n<td>\r\n<p>Pekerja profesional di bidang Teknologi Informasi dengan landasan nilai-nilai Islam</p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>'),
+(2, 'Visi & Misi', '<p><strong>Visi:</strong><br />Unggul dan Terkemuka dalam Memadukan dan MengembangkanNilai Keislaman dan Keilmuandalam bidang Teknik Informatika bagi Peradaba.</p>\r\n<p><strong>Misi:</strong></p>\r\n<ol dir="ltr">\r\n<li>Mengembangkan pendidikan dan pengajaran dalam bidang Teknik Informatika yang berkepribadian ''ZIKR'' (Zero Based, Imani, Konsisten, dan Result Oriented).</li>\r\n<li>Mengembangkan penelitian yang berkualitas di bidang Teknik Informatika bagi kepentingan masyarakat.</li>\r\n<li>Memberikan pelayanan kepada masyarakat di bidang Teknik Informatika serta penerapannya yang berwawasan Islam sebagai media dakwah.</li>\r\n<li>Mengembangkan kerjasama dengan berbagai pihak untuk mewujudkan Tridharma Perguruan Tinggi, terutama bidang Teknik Informatika.</li>\r\n</ol>'),
+(3, 'Tujuan', '<ol>\r\n<li>Melaksanakan pendidikan dan pengajaran di bidang teknik informatika yang integratif dan interkonetif dengan nilai-nilai keisalaman yang berkepribadian <strong><em>ZIKR</em></strong> (<em>Zero based, </em>Imani, Konsisten dan <em>Result oriented</em>) sehingga dihasilkan lulusan yang mampu bersaing dengan lulusan perguruan tinggi lain. <strong></strong></li>\r\n<li>Melaksanakan penelitian yang berkualitas dalam bidang Teknik Informatika yang berwawasan islami. </li>\r\n<li>Berperan aktif dalam pengabdian masyarakat di bidang Teknik Informatika.</li>\r\n<li>Terjalinnya kerjasama dengan berbagai pihak, terutama dalam bidang Informatika.<strong></strong></li>\r\n</ol>'),
+(4, 'Kompetensi Prodi', '<p><strong>Aspek Pengetahuan</strong></p>\r\n<ol>\r\n<li>Mampu merumuskan dan menyelesaikan permasalahan dalam bidang teknologi informasi dengan nilai-nilai-islam.</li>\r\n<li>Menguasai algoritma pemrograman sebagai salah satu metode dalam menyelesaikan masalah didasarkan pada nilai-nilai keislaman.</li>\r\n</ol>'),
+(5, 'Kompetensi Lulusan', '<p>Secara prinsip Progran Studi Teknik Informatika UIN Sunan Kalijaga menghasilkan Sarjana S1 bergelar Sarjana Komputer (S.Kom) yang mampu berkomunikasi secara global dan berdaya saing tinggi dengan Perguruan Tinggi lain, mampu mengembangkan Teknologi Informasi dengan landasan nilai-nilai Islam. Selain itu juga memiliki beberapa kemampuan, diantaranya:</p>\r\n<p>1. Mampu mengembangkan aplikasi Sistem Informasi (SI), meliputi :</p>\r\n<p>&nbsp; a)      Menganalisa dan merancang sistem informasi.</p>\r\n<p>&nbsp; b)      Mengimplementasikan rancangan sistem informasi dengan bahasa pemrograman yang sesuai.</p>\r\n<p>2. Berkemampuan sebagai administrator Sistem dan Jaringan Komputer (SJK), meliputi :</p>\r\n<p>&nbsp; a)      Menganalisa dan merancang sistem dan jaringan komputer.</p>\r\n<p>&nbsp; b)      Memilih teknologi jaringan yang tepat dalam penerapannya.</p>\r\n<p>&nbsp; c)      Membangun sistem jaringan dengan perangkat lunak dan perangkat keras yang sesuai.</p>\r\n<p>3. Mampu mengembangkan Sistem Cerdas (SC), meliputi :</p>\r\n<p>&nbsp; a)      Menganalisa dan merancang sistem cerdas.</p>\r\n<p>&nbsp; b)      Mengimplementasikan sistem cerdas.</p>\r\n<p>4. Memiliki kemampuan  tentang konsep dan metodologi pengembangan Rekayasa Perangkat Lunak (RPL) secara sistematis yang dapat dijabarkan sebagai berikut :</p>\r\n<p>&nbsp; a)      Mampu memilih dan menerapkan metode-metode yang tepat untuk mengembangkan sistem perangkat lunak sesuai dengan kondisi yang ada.</p>\r\n<p>&nbsp; b)      Mampu menangani seluruh siklus proses pengembangan sistem perangkat lunak.</p>\r\n<p>&nbsp; c)      Mampu menerapkan metode-metode standar untuk memperbaiki produk dan proses pengembangan sistem perangkat lunak.</p>');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_dokumen`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_dokumen` (
+  `id_dokumen` int(11) NOT NULL AUTO_INCREMENT,
+  `judul` varchar(100) NOT NULL,
+  `url_file` varchar(100) NOT NULL,
+  `tanggal` date NOT NULL,
+  PRIMARY KEY (`id_dokumen`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
+
+--
+-- Dumping data for table `tbl_dokumen`
+--
+
+INSERT INTO `tbl_dokumen` (`id_dokumen`, `judul`, `url_file`, `tanggal`) VALUES
+(15, 'Contoh Format Proposal Skripsi', 'Format_proposal_skripsi_Teknik_Informatika_2012_2.doc', '2012-05-08'),
+(16, 'Pedoman KP Rev 2012', 'PEDOMAN_KP_TIF_(15_Februari_2012).pdf', '2012-05-08');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_dosen`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_dosen` (
+  `id_dosen` int(5) NOT NULL AUTO_INCREMENT,
+  `nip` varchar(40) NOT NULL,
+  `nama` varchar(200) NOT NULL,
+  `pendidikan` varchar(200) NOT NULL,
+  `minat` varchar(200) NOT NULL,
+  `alamat` varchar(200) NOT NULL,
+  `email` varchar(40) NOT NULL,
+  `website` varchar(100) NOT NULL,
+  PRIMARY KEY (`id_dosen`,`nip`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
+
+--
+-- Dumping data for table `tbl_dosen`
+--
+
+INSERT INTO `tbl_dosen` (`id_dosen`, `nip`, `nama`, `pendidikan`, `minat`, `alamat`, `email`, `website`) VALUES
+(1, '19710823 199903 1 003', 'Agus Mulyanto, S.Si, M.Si.', '', 'Sistem Informasi', 'Perum Mino', '', ''),
+(2, '19770103 200501 1 003', 'Agung Fatwanto, S.Si., M.Kom.', '', '', '', '', ''),
+(3, '19751024 200912 1 002', 'Bambang Sugiantoro, S.Si., M.T.', '', '', '', '', ''),
+(4, '19790331 200501 1 004', 'M. Mustakim, ST., M.T.', '', '', '', '', ''),
+(5, '19780106 200212 2 001', 'Maria Ulfa Siregar, S.Kom., MIT.', '', '', '', '', ''),
+(6, '19771012 200604 1 002', 'Muhammad Anshari, B.M.I.S. (Honours), M.IT.', '', '', '', '', ''),
+(7, '19760812 200901 1 015', 'Muhammad Didik Rohmad Wahyudi, ST., MT.', '', '', '', '', ''),
+(8, '19791118 200501 1 003', 'Muhammad Taufiq Nuruzzaman, ST., M.Eng.', '', '', '', '', ''),
+(9, '19801217 200604 2 002', 'Ade Ratnasari, S.Kom., M.T.', '', '', '', '', ''),
+(10, '19801223 200901 1 007', 'Nurochman, S.Kom., M.Kom.', '', '', '', '', ''),
+(11, '19820511 200604 2 002', 'Shofwatul ''Uyun, S.T, M.Kom', '', '', '', '', ''),
+(12, '19710209 200501 1 003', 'Sumarsono, ST., M.Kom.', '', '', '', '', ''),
+(14, '19860306 201101 1 009', 'Aulia Faqih Rifa''i, M.Kom', '', '', '', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_pengumuman`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_pengumuman` (
+  `id_pengumuman` int(11) NOT NULL AUTO_INCREMENT,
+  `judul` varchar(100) NOT NULL,
+  `isi` text NOT NULL,
+  `tanggal` date NOT NULL,
+  `sumber` varchar(100) NOT NULL,
+  PRIMARY KEY (`id_pengumuman`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `tbl_pengumuman`
+--
+
+INSERT INTO `tbl_pengumuman` (`id_pengumuman`, `judul`, `isi`, `tanggal`, `sumber`) VALUES
+(1, 'Hari Jumat 23 Maret Libur Bersama ya', '<p>hari jumat depan tanggal 23 maret kita cuti bersama dikarenakan tanggal merah, diharapkan seluruh civitas akademika TIF bisa memanfaatkan waktu libur dengan belajar dirumah..</p>', '2012-04-03', 'anonim');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_saran`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_saran` (
+  `id_saran` int(5) NOT NULL AUTO_INCREMENT,
+  `nama` varchar(100) NOT NULL,
+  `subjek` varchar(200) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `pesan` text NOT NULL,
+  `tanggal` datetime NOT NULL,
+  PRIMARY KEY (`id_saran`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+
+--
+-- Dumping data for table `tbl_saran`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_slider`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_slider` (
+  `id_slider` int(3) NOT NULL AUTO_INCREMENT,
+  `judul` varchar(100) NOT NULL,
+  `gambar` varchar(100) NOT NULL,
+  `deskripsi` varchar(200) NOT NULL,
+  `url` varchar(200) NOT NULL,
+  `status` int(1) NOT NULL,
+  PRIMARY KEY (`id_slider`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `tbl_slider`
+--
+
+INSERT INTO `tbl_slider` (`id_slider`, `judul`, `gambar`, `deskripsi`, `url`, `status`) VALUES
+(2, 'Kegiatan KSL', 'ksl.jpg', 'kegiatan ksl seminar dan talkshow ubuntu', '', 1),
+(3, 'Kumpul bareng Dosen dan Alumni', 'alumni.jpg', 'Kegiatan kumpul bareng dosen dan alumni teknik informatika', '', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_users`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_users` (
+  `id_users` int(5) NOT NULL AUTO_INCREMENT,
+  `nama` varchar(100) NOT NULL,
+  `username` varchar(20) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `nohp` varchar(18) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `status` int(1) NOT NULL,
+  PRIMARY KEY (`id_users`,`username`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `tbl_users`
+--
+
+INSERT INTO `tbl_users` (`id_users`, `nama`, `username`, `password`, `nohp`, `email`, `status`) VALUES
+(1, 'Muhammad Syafrudin', 'justudin', '0bd3445b03ea5d227dbbaf8aecf81f20', '085677882181', 'udinjust4u@yahoo.com', 1),
+(2, 'Nur Shalahuddin Fajri', 'krocol', 'e172dd95f4feb21412a692e73929961e', '090212988912', 'krocol@krocol.com', 1),
+(3, 'Umi nabila Sayang', 'umi', '0bd3445b03ea5d227dbbaf8aecf81f20', '090212988912', 'umi@sayangabi.com', 1);

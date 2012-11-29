@@ -1,0 +1,22 @@
+* {margin:0; padding:0}
+
+#wrapper {
+	color: white;
+	margin-right: 5px;
+	margin-left: 5px;
+	margin-bottom: 0px;
+	padding: 10px;
+	padding-bottom: 0px;
+	float: right;
+	padding: 0;
+	width:600px;}
+
+#slideleft:hover {background-position:-0 -265px}
+
+#slideright:hover {background-position:-50px 90px}
+
+#slider {float:left; position:relative; overflow:auto; width:600px; height:310px}
+#slider ul {position:absolute; list-style:none; top:0; left:0}
+#slider li {float:left; width:600px; height:310px}
+
+.pagination {position:absolute; top:40px; right:61px; list-style:none; height:25px}

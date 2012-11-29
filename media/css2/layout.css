@@ -1,0 +1,254 @@
+
+/* konfigurasi elemen dasar */
+html { -webkit-text-size-adjust:none; }  /* iPhone font size fix */
+body { font: 0.85em/1.5 Verdana, 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif; color: #333; min-width: 980px; margin-bottom: 30px; margin-top: 2px;}
+pre, 
+code { font-family: 'DejaVu Sans Mono', Monaco, Consolas, monospace; }
+a { color: #007c41; text-decoration: none;}
+a:hover { text-decoration: underline;}
+p { margin: 1em; }
+
+.subscribe-link { float: right; background: transparent url('css/img/rss2.png') no-repeat top left; padding: 0px; ; font-size: 0.9em; margin-top: -45px; color: #888; }
+.subscribe-link:hover { text-decoration:none; color: #636363; }
+.clear {  clear: both;  display: block;  overflow: hidden;  visibility: hidden;  width: 0;  height: 0; }
+
+section header h1 {
+font-size: large;
+font-family: 'DIN Medium', 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif; 
+color: #959595;
+text-transform: none;
+border-bottom: 1px solid #f5f5f5;
+
+}
+
+body {
+background: url('../images/background-body.png') 0 0 repeat white;
+}
+
+/* Container */
+.container {
+background: white;	
+padding: 0px 20px 20px 20px;
+margin: auto;
+width: 1000px;
+border-radius: 4px;
+box-shadow: 1px 1px 10px 1px #c5c5c5;
+border: 1px solid #c5c5c5;
+}
+/* Grid */
+.kotak_berita {
+max-width:690px;
+min-height: 600px;
+display: inline; float: left;
+padding: 15px 15px 15px 15px;
+margin: 5px 5px 5px 5px;
+background-color: #f5f5f5;
+border-radius: 2px;
+border: 2px solid #c5c5c5;
+}
+
+
+.kotak_pengumuman{
+width: 285px;
+min-height: 200px;
+display: inline; float: left; 
+padding: 15px 15px 15px 15px;
+margin: 5px 5px 5px 5px;
+background-color: #f5f5f5;	
+border-radius: 7px;
+border: 2px solid #c5c5c5;
+}
+
+.kotak_sidebar{
+width: 210px;
+display: inline; float: left; 
+padding: 15px 15px 15px 15px;
+margin: 5px 5px 5px 5px;
+background-color: #f5f5f5;	
+border-radius: 7px;
+border: 2px solid #c5c5c5;
+min-height:600px;
+}
+
+.detail{
+    width: 680px;
+}
+
+/* Header */
+.tophead{
+background: transparent url('../images/header-webtif.png') no-repeat top left;
+margin-top: 10px;
+margin-bottom: 5px;
+margin-left: auto;
+margin-right: auto;
+width: 980px;
+height: 127px;
+}
+
+.tophead nav {
+float: right;
+margin: 5px 20px 14px 0px;
+}
+
+.tophead nav ul li {
+font-family: "DIN Medium", "Helvetica Neue", "Trebuchet MS", Arial, sans-serif;
+font-size: 0.95em;
+margin:0px;
+list-style: none;
+display: inline;
+padding-left: 20px;
+}
+
+.tophead nav ul li a {
+color: #fff;
+text-shadow: 1px 1px 2px #004122;
+}
+
+.menuhead {
+font-family: Ubuntu;
+font-size: medium;
+border: 1px solid #c5c5c5;
+width: 980px;
+height: 35px;
+background-color: #252525;
+margin-left: auto;
+margin-right: auto;
+padding: 3px;
+margin-bottom: 10px;
+border-radius: 5px;
+}
+
+/* Content */
+
+#news article {
+text-align: justify;
+background-color: #f5f5f5;
+}
+
+#news article header {
+margin-bottom: 5px;
+margin-top: 5px;
+padding-right: 50px;
+margin-left: auto;
+
+}
+/* konfigurasi judul berita */
+#news article h1 {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+text-align:left;
+margin:0;
+border: 0px;
+font-size: small;
+text-transform: none;
+}
+
+#news article p {
+font-size: 0.9em;
+padding: 0px 0px 10px 0px;
+margin: 0;
+text-align:justify;
+}
+
+#news p.read-more {
+margin-top: 10px;
+}
+/* konfigurasi isi pengumuman */
+#notice {
+background-color: #f5f5f5;
+}
+
+#notice article header h1{
+font-family: verdana;
+font-size: 1em;
+border-bottom: 1px solid #ddd;
+}
+
+#notice article p{
+border-bottom: 1px solid #c5c5c5;
+}
+
+#sidebar {
+width: 250px;
+background-color: #f5f5f5;
+}
+#sidebar a{
+color: green;
+}
+
+#sidebar header{
+text-align: left;
+font-size: medium;
+background: transparent url('../images/title_left.gif');
+}
+
+#notice ul li, #colloquy-blog ol li { padding: 0px 0px 0px 0px; font-size: small; list-style: none;}
+#notice ul{
+    
+}
+/* featured-content (slideshow) */
+#featured {
+width: 980px;
+height: 500px;
+margin-left: auto; margin-right: auto;
+margin-bottom: 20px;
+border-radius: 5px;
+}
+
+#detail_berita header p.author{
+color: #996633;
+font-style: italic;
+}
+
+#detail_berita p{
+text-align: justify;
+font-size: 12px;
+}
+
+#detail_berita table{
+text-align: left;
+border: 1px solid #c5c5c5;
+box-shadow:1px 1px 5px 1px #c5c5c5;
+margin-bottom: 50px;
+}
+#detail_berita th{
+height: 40px;
+text-align: left;
+background-color: #c5c5c5;
+}
+#detail_berita td{
+height: 35px;
+text-align: left;
+background-color: transparent;
+}
+/*tabel*/
+table.abstrak,table.agenda{
+    font-size: small;
+}
+table.abstrak,table.agenda td{
+    vertical-align:top;
+    height: 30px;
+}
+table.abstrak,table.agenda tbody{
+    text-align: justify;
+    vertical-align: top;
+}
+
+/* Footer */
+footer {
+clear: both;
+border-top: 1px solid #ccc;
+margin: 30px 0px;
+font-size: 11px;
+padding-top: 10px;
+color: #555;
+}
+footer p {
+margin: 0px;
+text-align: right;
+}
+footer li{
+    
+    display: inline;
+    
+}
+footer #copyright { text-align: center; clear: left; margin-bottom: 20px; width:980px; float: left;}

@@ -1,0 +1,366 @@
+﻿/* `XHTML, HTML4, HTML5 Reset
+----------------------------------------------------------------------------------------------------*/
+/* Reset browser defaults */  body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td { 	margin: 0; 	padding: 0; } table { 	border-collapse: collapse; 	border-spacing: 0; } fieldset, img { 	border: 0; } address, caption, cite, code, dfn, em, strong, th, var { 	font-style: normal; 	font-weight: normal; } ol, ul { 	list-style: none; } caption, th { 	text-align: left; } h1, h2, h3, h4, h5, h6 { 	font-size: 100%; 	font-weight: normal; } q:before, q:after { 	content: ''; } abbr, acronym { 	border: 0; } 
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, dialog, div, dl, dt, em, embed, fieldset, figcaption, figure, font, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, meter, nav, object, ol, output, p, pre, progress, q, rp, rt, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video, xmp {   border: 0;   margin: 0;   padding: 0;   font-size: 100%; }  html, body {   height: 100%; }  article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {   display: block; }  b, strong {   font-weight: bold; }  img {   color: transparent;   font-size: 0;   vertical-align: middle;   -ms-interpolation-mode: bicubic; }  li {   display: list-item; }  table {   border-collapse: collapse;   border-spacing: 0; }  th, td, caption {   font-weight: normal;   vertical-align: top;   text-align: left; }  q {   quotes: none; }  q:before, q:after {   content: '';   content: none; }  sub, sup, small {   font-size: 75%; }  sub, sup {   line-height: 0;   position: relative;   vertical-align: baseline; }  sub {   bottom: -0.25em; }  sup {   top: -0.5em; }  svg {   overflow: hidden; }
+.hidden { display: none; }
+a.ualink { background: none; height: 0px; width: 0px; }
+
+
+/* Custom Fonts */
+
+@font-face {
+	font-family: "DIN Bold";
+	src: url('/~publicas/uofa/css/DINWeb-Bold.eot');
+    src: url('/~publicas/uofa/css/DINWeb-Bold.eot?#iefix') format('embedded-opentype'),
+         url('/~publicas/uofa/css/DINWeb-Bold.woff') format('woff');
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "DIN Medium";
+	src: url('/~publicas/uofa/css/DINWeb-Bold.eot');
+	src: url("/~publicas/uofa/css/DINWeb-Medium.eot?#iefix") format("embedded-opentype"),
+	     url("/~publicas/uofa/css/DINWeb-Medium.woff") format("woff");
+}
+
+
+/* Base element setup */
+html { -webkit-text-size-adjust:none; }  /* iPhone font size fix */
+body { font: 0.9em/1.5 Verdana, 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif; color: #333; min-width: 980px; margin-bottom: 30px; }
+pre, 
+code { font-family: 'DejaVu Sans Mono', Monaco, Consolas, monospace; }
+a { color: #007c41; text-decoration: none;}
+a:hover { text-decoration: underline; }
+p { margin: 1em 0; }
+section header h1 { font-size: 1.5em; font-family: 'DIN Medium', 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;  color: #636363; text-transform: uppercase;}
+
+.main-nav { font-family: 'DIN Bold', 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif; }
+.masthead nav { font-family: 'DIN Medium', 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif; font-weight: normal;}
+
+/* Header */
+.navigation { display: none; }
+.blade { margin: 20px 0px 10px 0px; position: relative; }
+.blade nav div { display:inline; }
+.blade nav { display: inline; margin-left: 190px; margin-right: 0px; }
+.blade nav ul { margin:0px; list-style: none; display: inline; }
+.blade nav ul li { margin:0px; list-style: none; display: inline; }
+.blade nav ul li a { font-size: 0.76em; padding: 0px 8px 0px 4px; border-right:1px solid #999; color: #555; display: inline; }
+.blade nav ul li:last-child a { border: 0px; }
+.blade nav ul li.last a { border:0px }
+.blade .search {margin-right: 0px; width: 240px; margin-left: 20px; position: absolute; top: 0px; right: 0px; display:inline; }
+.blade .search #search { margin-bottom: 5px; float:left;  height: 1.4em; width: 165px;}
+.blade .search label input { float: right;margin:0px; font-size: 11px; width:60px; height:24px; }
+
+.masthead { background: transparent url('http://www.ualberta.ca/~publicas/uofa/css/img/NavBarNoLogo.png') no-repeat top left; margin:0px; width: 980px; height: 88px  }
+.masthead h1 { text-indent: -9999px; margin: 13px 0px 15px 20px; display: inline; float: left; width: 220px; }
+.masthead h1 a { display: block; width: 210px; height: 55px; background: transparent url(img/NavLogo.png) no-repeat; position:relative; left: -2px; top:4px;}
+.masthead nav { float: right; margin: 51px 20px 14px 0px; }
+.masthead nav ul,
+.masthead nav ul li { font-family: "DIN Medium", "Helvetica Neue", "Trebuchet MS", Arial, sans-serif; font-size: 0.95em; margin:0px; list-style: none; display: inline; padding-left: 20px;}
+.masthead nav ul li a { color: #fff; text-shadow: 1px 1px 2px #004122; }
+
+.main-nav { background: #e9e9e9 url('http://www.ualberta.ca/~publicas/uofa/css/img/NavBarNoLogo.png') no-repeat bottom left; margin:0px; width: 980px; height: 39px; }
+.main-nav ul li { margin:5px 0px 3px 0px; list-style: none; float: left; }
+.main-nav ul li a { display: block; padding: 0px 25px; margin: 10px 0px; font-size: 0.9em; line-height: 0.9em; letter-spacing: 0.025em; font-weight: normal; text-transform:uppercase; color: #444; border-right: 1px solid #c2c2c2;  }
+.main-nav ul li a:hover { color: #007c41; text-decoration: none; }
+
+.main-nav .whyualberta a { width: 116px; padding-left: 20px; }
+.main-nav .facultiesandprograms a { width: 181px; text-align: center; }
+.main-nav .research a { width: 81px; text-align: center; }
+.main-nav .admissions a { width: 91px; text-align: center; }
+.main-nav .campuslife a { width: 101px; text-align: center; }
+.main-nav .newsandevents a { width: 115px; border: 0px; padding-right: 20px; text-align: right} 
+
+.breadcrumb { padding: 10px 0px; font-size: 0.85em; width: 960px; margin: 5px 20px 15px 20px; position: relative; z-index:1000; }
+.breadcrumb ul li { display: inline; }
+.breadcrumb ul li a {  }
+.breadcrumb ul li:after { content: " / "; padding: 0px 6px; }
+.breadcrumb ul li:last-child:after { content: ""; }
+
+.breadcrumbtrail { color: #666; }
+
+.ualink { display: none; }
+
+#slides { width:980px; height: 450px; margin-bottom: 40px; border-bottom: 1px solid #e0e0e0; position: relative;}
+.slides_container { height:450px; }
+a.prev { display: block; background: transparent url('http://www.ualberta.ca/~publicas/uofa/css/img/homepage4.png') no-repeat -468px -35px; text-indent: -9999px; width: 62px; height: 62px; position: absolute; left: -80px; top: 200px; }
+a.next { display: block; background: transparent url('http://www.ualberta.ca/~publicas/uofa/css/img/homepage4.png') no-repeat -406px -35px; text-indent: -9999px; width: 62px; height: 62px; position: absolute; left: 1000px;  top: 200px;}
+a.prev:hover { background-position: -468px -98px; }
+a.next:hover { background-position: -406px -98px; }
+.pagination, .pagination li { list-style: none; margin: 0px; }
+.pagination { position: absolute; top: 466px; left: 50%; margin-left: -38px; }
+
+.pagination li { display: inline; }
+.pagination a { display: block; float: left; margin: 0px 5px; height: 9px; width: 9px; text-indent: -9999px; background: transparent url('http://www.ualberta.ca/~publicas/uofa/css/img/homepage4.png') no-repeat -529px -35px; }
+.pagination li.current a { background-position: -529px -45px; }
+
+.subscribe-link { float: right; background: transparent url('http://www.ualberta.ca/~publicas/uofa/css/img/rss2.png') no-repeat top left; padding: 0px 20px 0px 20px; ; font-size: 0.9em; margin-top: -35px; color: #888; }
+.subscribe-link:hover { text-decoration:none; color: #636363; }
+
+a.watch-video { display: block; background: transparent url('http://www.ualberta.ca/~publicas/uofa/css/img/homepage4.png') no-repeat -272px -123px; text-indent: -9999px; width: 132px; height: 34px;  }
+a.watch-video:hover { display: block; background: transparent url('http://www.ualberta.ca/~publicas/uofa/css/img/homepage4.png') no-repeat -272px -88px; text-indent: -9999px; width: 132px; height: 34px;  }
+a.find-more:hover { display: block; background: transparent url('http://www.ualberta.ca/~publicas/uofa/css/img/homepage4.png') no-repeat -601px -36px; text-indent: -9999px; width: 145px; height: 34px; }
+a.find-more { display: block; background: transparent url('http://www.ualberta.ca/~publicas/uofa/css/img/homepage4.png') no-repeat -601px -72px; text-indent: -9999px; width: 145px; height: 34px; }
+a.webcasts:hover { display: block; background: transparent url('http://www.ualberta.ca/~publicas/uofa/css/img/webcast-button.png') no-repeat 0 -36px; text-indent: -9999px; width: 150px; height: 35px; }
+a.webcasts { display: block; background: transparent url('http://www.ualberta.ca/~publicas/uofa/css/img/webcast-button.png') no-repeat 0 0; text-indent: -9999px; width: 150px; height: 35px; }
+a.watch-live-button {  display: block; background: transparent url('http://www.ualberta.ca/~publicas/uofa/css/img/watch-live-button.png') no-repeat 0 0; text-indent: -9999px; width: 121px; height: 35px;  }
+a.watch-live-button:hover {  display: block; background: transparent url('http://www.ualberta.ca/~publicas/uofa/css/img/watch-live-button.png') no-repeat 0 -35px; text-indent: -9999px; width: 121px; height: 35px;  }
+
+/* Feature */
+.slides_container { width: 980px; margin: 0px auto;}
+#slides .simple-water img { position: absolute; z-index: 20; left:0px; }
+#slides .simple-water p,
+#slides .simple-water header { display: none; }
+#slides .simple-water a.watch-video { display: block; text-indent: -9999px; position: absolute; left: 17px; top: 388px; z-index: 1000; }
+#slides .earth img { position: absolute; z-index: 20; left:0px; }
+#slides .earth p,
+#slides .earth header { display: none; }
+#slides .earth a.find-more { display: block; text-indent: -9999px; position: absolute; left: 17px; top: 386px; z-index: 1000; }
+#slides .health img { position: absolute; z-index: 20; }
+#slides .health p,
+#slides .health header { display: none; }
+#slides .health a.find-more { display: block; text-indent: -9999px; position: absolute; left: 17px; top: 318px; z-index: 1000; }
+#slides .nov11 header { display: none; }
+#slides .convocation img { position: absolute; z-index: 20; }
+#slides .convocation p,
+#slides .convocation header { display: none; }
+#slides .convocation a.webcasts { display: block; text-indent: -9999px; position: absolute; left: 17px; top: 388px; z-index: 1000; }
+#slides .camps img { position: absolute; z-index: 20; }
+#slides .camps p,
+#slides .camps header { display: none; }
+#slides .camps a.find-more { display: block; text-indent: -9999px; position: absolute; left: 816px; top: 350px; z-index: 1000; }
+#slides .dino img.background { position: absolute; z-index: 20; left: 0px; }
+#slides .dino p,
+#slides .dino header { display: none; }
+#slides .dino a.watch-video { display: block; text-indent: -9999px; position: absolute; left: 830px; top: 395px; z-index: 1000; }
+#slides .dino .dino-holder { position: absolute; z-index: 25; left: 584px }
+#slides .dino .dino-holder img { position: absolute; display: none; }
+#slides .golden-bears img { position: absolute; z-index: 20; left:0px; }
+#slides .golden-bears p,
+#slides .golden-bears header { display: none; }
+#slides .golden-bears a.find-more { display: block; text-indent: -9999px; position: absolute; left: 19px; top: 390px; z-index: 1000; }
+#slides .teacher img { position: absolute; z-index: 20; }
+#slides .teacher p,
+#slides .teacher header { display: none; }
+#slides .teacher a.find-more { display: block; text-indent: -9999px; position: absolute; left: 816px; top: 388px; z-index: 1000; }
+#slides .teacher a.watch-live-button { display: block; text-indent: -9999px; position: absolute; left: 838px; top: 388px; z-index: 1000;   }
+#slides .water img { position: absolute; z-index: 20; }
+#slides .water p,
+#slides .water header { display: none; }
+#slides .water a.find-more { display: block; text-indent: -9999px; position: absolute; left: 816px; top: 388px; z-index: 1000; }
+#slides .water a.watch-live-button { display: block; text-indent: -9999px; position: absolute; left: 840px; top: 388px; z-index: 1000; }
+#slides .water a.watch-video { display: block; text-indent: -9999px; position: absolute; left: 830px; top: 388px; z-index: 1000; }
+#slides .marklewis img { position: absolute; z-index: 20; }
+#slides .marklewis p,
+#slides .marklewis header { display: none; }
+#slides .marklewis a.watch-video { display: block; text-indent: -9999px; position: absolute; left: 18px; top: 388px; z-index: 1000; }
+#slides .dodgeball a.find-more { display: block; text-indent: -9999px; position: absolute; left: 816px; top: 393px; z-index: 1000; }
+#slides .prospective { display: none; }
+#slides .prospective a.find-more { display: block; text-indent: -9999px; position: absolute; left: 816px; top: 388px; z-index: 1000;  }
+#slides .arifalibhai img { position: absolute; z-index: 20; }
+#slides .arifalibhai p,
+#slides .arifalibhai header { display: none; }
+#slides .arifalibhai a.watch-video { display: block; text-indent: -9999px; position: absolute; left: 830px; top: 388px; z-index: 1000; }
+
+
+#news, #why-ualberta, #middle-column, #keep-in-touch, #explore, footer { position: relative; z-index: 50; }
+
+.container #slides section p, 
+.container #slides section header, 
+.container #slides section span { display: none; }
+
+#why-ualberta h1 span { color: #7ab800; }
+#why-ualberta h1 { font-size: 1.8em; }
+#why-ualberta p { width: 695px; float: left; display: inline; font-size: 0.85em; line-height: 1.8em; position: relative; }
+#why-ualberta p.caption img { float: left; margin-right: 20px; border: 6px solid #fff; box-shadow: 1px 1px 5px 1px #ccc;  }
+#why-ualberta p.caption span { text-transform: uppercase; }
+#why-ualberta ul { list-style: none; margin: 0px 0px 0px 735px; border-left: 1px solid #e0e0e0; padding-left: 20px; height: 160px;  }
+#why-ualberta p.caption img.uplifting { float: right; bottom: 0; border: 0px; box-shadow: none; right: 15px; position: absolute; }
+#why-ualberta { padding-bottom: 20px; }
+
+.apply-now-link { text-indent: -9999px; display: block; background: transparent url('http://www.ualberta.ca/~publicas/uofa/css/img/homepage4.png') no-repeat -1px -36px; width: 202px; height: 50px; margin-bottom: 10px; }
+.work-here-link { text-indent: -9999px; display: block; background: transparent url('http://www.ualberta.ca/~publicas/uofa/css/img/homepage4.png') no-repeat -1px 0px; width: 203px; height: 35px; margin-bottom: 5px;  }
+.give-link { text-indent: -9999px; display: block; background: transparent url('http://www.ualberta.ca/~publicas/uofa/css/img/homepage4.png') no-repeat -406px 0px; width: 203px; height: 35px; }
+.apply-now-link:hover { background-position: -203px -36px; }
+.work-here-link:hover { background-position: -204px 0px;  }
+.give-link:hover { background-position: -609px 0px; }
+
+.careers-link { text-indent: -9999px; display: block; background: transparent url('http://www.ualberta.ca/~publicas/uofa/css/img/homepage4.png') no-repeat -617px -144px; width: 203px; height: 35px; margin-bottom: 5px;  }
+.careers-link:hover { background-position: -617px -108px;  }
+
+
+a.exp-prev { text-indent: -9999px; display: block; background: transparent url('http://www.ualberta.ca/~publicas/uofa/css/img/homepage4.png') no-repeat -553px -54px; width: 40px; height: 80px; position: relative; top: -150px; left: 150px;}
+a.exp-next { text-indent: -9999px; display: block; background: transparent url('http://www.ualberta.ca/~publicas/uofa/css/img/homepage4.png') no-repeat -530px -54px; width: 23px; height: 80px; position: relative; top: -230px; left: 940px; }
+
+/* News */
+#news article { }
+#news article header { margin-bottom: 5px; margin-top: 10px; }
+#news article h1 { font-family: Verdana, Arial, Helvetica, sans-serif; margin: 0; text-shadow: none; font-size: 1em; text-transform: none; font-weight: bold; }
+#news article h1 a { }
+#news article h1 a:hover {  }
+#news article p { font-size: 0.9em;border-bottom: 1px solid #ddd; padding: 0px 0px 10px 0px; margin: 0px 20px; }
+#news article.last p {  }
+#news p.news-read-more { margin-top: 10px; }
+
+#ualberta-twitter { padding: 0px 20px; font-size: 0.85em; }
+#ualberta-twitter li { border-bottom: 1px solid #ddd; padding: 10px 0px; }
+#ualberta-twitter li.tweet_first { padding: 0px 0px 10px 0px; }
+div.social-media { padding: 10px 20px 0px 20px;}
+#keep-in-touch a.social-media-link { font-size: 0.85em; border-top: 1px dotted #e0e0e0; padding-top: 10px; margin-top:10px; display:block;}
+#keep-in-touch iframe { margin: 10px 0px 0px 20px; }
+#middle-column, #news, #keep-in-touch { }
+#middle-column p { margin-bottom: 20px; font-size: 0.85em; }
+
+/* Explore */
+#explore { height: 100px; }
+#explore h1 { font-size: 1.8em; margin-top: 30px; }
+#explore ul li { list-style:none; }
+.explore-container { position: relative; top: 0px; left: 75px; }
+.explore-icons li { float: left; list-style: none; margin: 0px 10px; }
+       .explore-icon i { text-indent: -9999px; display: block; } 
+/* Explore */
+.explore-icon { font-size: 0.8em; display: block; width: 75px; height: 90px; padding-top:0px; background-position: center top; background-repeat: no-repeat; text-align: center; }
+.explore-icon i { text-indent:-9999px; display: block; background: transparent url('http://www.ualberta.ca/~publicas/uofa/css/img/homepage4.png') no-repeat -132px -201px; width: 40px; height: 40px; margin:0px 17px 3px 17px; }
+.explore-icon.athletics i { background-position: -82px -201px; } 
+.explore-icon.commercial-relations i { background-position: -123px -201px; } 
+.explore-icon.campus-recreation i { background-position: -205px -201px; } 
+.explore-icon.events i {background-position: -246px -201px; } 
+.explore-icon.international-impact i { background-position: -328px -201px; } 
+.explore-icon.media-relations i { background-position: -369px -201px;} 
+.explore-icon.museums i { background-position: -410px -201px;} 
+.explore-icon.president i {background-position: -451px -201px; } 
+.explore-icon.programs i { background-position: -492px -201px; } 
+.explore-icon.maps i { background-position: 0px -201px; } 
+.explore-icon.gsa i { background-position: -287px -201px; } 
+.explore-icon.students-union i {background-position: -41px -201px; } 
+.explore-icon.bookstore i { background-position: -164px -201px; } 
+.explore-icon.governance i { background-position: -533px -201px; } 
+.explore-icon.sustain i { background-position: -574px -201px; } 
+.explore-icon.wellness i { background-position: -615px -201px; } 
+.explore-icon.camps i { background-position: -697px -201px; } 
+
+.explore-icon.athletics:hover i {  background-position: -82px -160px; } 
+.explore-icon.commercial-relations:hover i {  background-position: -123px -160px; } 
+.explore-icon.campus-recreation:hover i {  background-position: -205px -160px; } 
+.explore-icon.events:hover i { background-position: -246px -160px; } 
+.explore-icon.international-impact:hover i {  background-position: -328px -160px; } 
+.explore-icon.media-relations:hover i {  background-position: -369px -160px; } 
+.explore-icon.museums:hover i {  background-position: -410px -160px; } 
+.explore-icon.president:hover i {  background-position: -451px -160px; } 
+.explore-icon.programs:hover i {  background-position: -492px -160px;} 
+.explore-icon.maps:hover i { background-position: 0px -160px; } 
+.explore-icon.gsa:hover i {  background-position: -287px -160px; } 
+.explore-icon.students-union:hover i {  background-position: -41px -160px; } 
+.explore-icon.bookstore:hover i { background-position: -164px -160px; } 
+.explore-icon.governance:hover i { background-position: -533px -160px; } 
+.explore-icon.sustain:hover i { background-position: -574px -160px; } 
+.explore-icon.wellness:hover i { background-position: -656px -201px; } 
+.explore-icon.camps:hover i { background-position: -738px -201px; } 
+
+#search-results { padding: 20px; }
+#search-results .search-box { font-size: 1.1em; padding: 2px; }
+#search-results .submit-button { font-size: 1.1em; padding: 2px;}
+
+#colloquy-blog { margin-top: 20px; }
+#campus-notices ul li, #colloquy-blog ol li { padding: 3px 20px; font-size: 0.85em; }
+#colloquy-blog .last { display: none; }
+
+/* Jay - added default content list padding */
+#content ul { padding: 0 30px; }
+#content ul li { padding: 0 5px; }
+
+a.apply-sidebar { color: #006e02; font-family: "DIN Medium", "Helvetica Neue", Verdana, Arial, sans-serif; display: block; padding: 16px 0px 0px 15px; width: 145px; height: 36px; background: transparent url('http://www.ualberta.ca/~publicas/uofa/img/apply-now-sm.png') no-repeat top left; font-size: 1.1em; text-transform: uppercase; }
+a.apply-sidebar:hover { background-position: bottom left; text-decoration: none; }
+
+.box { background: #f4f4f4; border: 1px solid #e0e0e0; box-shadow: 0px 0px 2px 1px #e0e0e0; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px 5px 5px 5px; color: #555; padding: 15px 0px; font-size: 0.95em; margin-bottom:20px;  }
+.box h1,
+.box p { padding:0px 20px; margin:0px }
+.box h1 {  }
+.box.column1 { margin-left: 0px; }
+
+/* HOME */
+#content.home-page { position: relative; top: 0px;  }
+#content.home-page .feature { padding-left: 0px; }
+#content.home-page .sectiontitle { display: none; }
+
+/* SIDEBAR */
+.tweet_action { font-size: 0.95em; padding-left: 17px; padding-right: 5px; background: transparent url('http://www.ualberta.ca/~publicas/uofa/css/img/twitter-icons.png') no-repeat -3px -8px; }
+.tweet_retweet { background-position: -2px -36px; } 
+.tweet_favorite { background-position:-2px -69px; }
+.feature.carousel p { color: #666; font-size: 0.85em; line-height: 1.8em; }
+.tweet_time a { font-size: 0.95em; color: #999; }
+div.feature { margin:0px; padding: 0px;}
+
+aside { display: inline; float: left; margin-left: 10px; margin-right: 0px; width: 190px; }
+
+/* Footer */
+footer { clear: both; border-top: 1px solid #ccc; margin: 30px 0px; font-size: 0.7em; padding-top: 10px; color: #555;  background: transparent url('http://www.ualberta.ca/~publicas/uofa/css/img/NavShadow.jpg') no-repeat top left; }
+footer nav { float: left; margin-bottom:10px;}
+footer nav ul li {  margin:0px; list-style: none; display: inline; padding-right: 4px; }
+footer nav ul li a { text-decoration: none; }
+footer p { margin: 0px; text-align: right; }
+footer #copyright { float: left; clear: left; margin-bottom: 20px; width:900px; }
+
+section header { margin-bottom:10px; }
+
+#explore h1 { font-size: 1.8em; }
+#explore ul li { list-style:none; }
+
+#calendar-link a { display: block; border-top: 1px dashed #ddd; margin-top: 10px;  padding-top: 5px; font-size: 1.05em; }
+#apply-link { margin:-33px 0px 0px 0px; }
+#apply-link a { text-transform: uppercase; background: yellow; font-size: 1.4em; padding: 15px 20px; display: block; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px 5px 5px 5px; color: #333; font-weight: bold; }
+
+/* Grid */
+.container, footer { margin-left: auto; margin-right: auto; width: 980px; }
+
+.grid_6,
+.grid_12,
+.grid_24 { display: inline; float: left; margin-left: 5px; margin-right: 5px; }
+
+.left { margin-left: 0px; }
+.right { margin-right: 0px; }
+
+.container .grid_6 {width:230px; }
+.container .grid_12 {width:470px;}
+.container .grid_24 {width:950px;}
+
+
+.container .grid_6.box {width:228px; }
+.container .grid_12.box {width:468px;}
+.container .grid_24.box {width:948px;}
+
+.container .grid_6.full {width:240px; }
+.container .grid_12.full {width:480px;}
+.container .grid_24.full {width:980px;}
+
+.container .grid_6.full.box {width:243px; }
+.container .grid_12.full.box {width:483px;}
+.container .grid_24.full.box {width:978px;}
+
+/* IE7 */
+.ie7 .blade nav { position: relative; float: left; margin-left: 180px; }
+.ie7 .blade .search { position: relative; }
+.ie7 #slides .science-center p { top: 57px; }
+.ie7 #explore h1 { margin-top: 40px; }
+.ie7 .explore-container { position: relative; top: 10px; left: 75px; }
+
+
+/* Clearing Fixes */
+/* http://sonspring.com/journal/clearing-floats */
+.clear {  clear: both;  display: block;  overflow: hidden;  visibility: hidden;  width: 0;  height: 0; }
+
+/* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
+.clearfix:before,
+.clearfix:after,
+.container:before,
+.container:after { content: '.';  display: block;  overflow: hidden;  visibility: hidden;  font-size: 0;  line-height: 0;  width: 0;  height: 0; }
+.clearfix:after,
+.container:after {  clear: both; }
+
+/*
+  The following zoom:1 rule is specifically for IE6 + IE7.
+  Move to separate stylesheet if invalid CSS is a problem.
+*/
+.clearfix,
+.container { zoom: 1; }
+
